@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Ремонт</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__body">
+          <a href="/" class="header__logo"></a>
+          <nav class="header__nav ">
+            <ul class="header__nav-list">
+              <li class="header__list-item header__sublist">Меню
+                <ul>
+                  <li class="header__list-subitem"><a href="/" target="_blank" rel="noopener noreferrer">услуги</a></li>
+                  <li class="header__list-subitem"><a href="/" target="_blank" rel="noopener noreferrer">статьи</a></li>
+                  <li class="header__list-subitem"><a href="/" target="_blank" rel="noopener noreferrer">вакансии</a>
+                  </li>
+                  <li class="header__list-subitem"><a href="/" target="_blank" rel="noopener noreferrer">франшиза</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__list-item"><a href="/" target="_blank" rel="noopener noreferrer">портфолио</a></li>
+              <li class="header__list-item"><a href="/" target="_blank" rel="noopener noreferrer">цены</a></li>
+              <li class="header__list-item"><a href="/" target="_blank" rel="noopener noreferrer">схема работы</a></li>
+              <li class="header__list-item"><a href="/" target="_blank" rel="noopener noreferrer">отзывы</a></li>
+              <li class="header__list-item"><a href="/" target="_blank" rel="noopener noreferrer">контакты</a></li>
+              <li class="header__list-item"><a href="/" target="_blank" rel="noopener noreferrer">Гарантия</a></li>
+            </ul>
+          </nav>
+          <a href="tel:+" class="header__call">Обратный звонок</a>
+          <div class="header__nav-mobile nav-mobile">
+            <span class="nav-mobile__item nav-mobile__item_1"></span>
+            <span class="nav-mobile__item nav-mobile__item_2"></span>
+            <span class="nav-mobile__item nav-mobile__item_3"></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="main">
+        <div class="container">
+          <div class="main__body">
+            <div class="main__flex-wrapper">
+              <div class="main__text-block">
+                <h1 class="main__title">Ремонт под ключ от 2900&nbsp;руб/м<sup>2</sup>.</h1>
+                <h2 class="main__subtitle">При заказе ремонта делаем<br>дизайн-проект в подарок</h2>
+                <ul class="main__list">
+                  <li class="main__list-item main__list-item_1">Бесплатный выезд в день обращения</li>
+                  <li class="main__list-item main__list-item_2">Гарантия на работу до 5 лет</li>
+                  <li class="main__list-item main__list-item_3">Жесткое соблюдение сроков</li>
+                </ul>
+              </div>
+              <form class="main__form form">
+                <h3 class="form__title">Рассчитайте<br>стоимость ремонта</h3>
+                <fieldset class="form__fieldset form__fieldset-range">
+                  <legend class="form__legend form__legend_1">Площадь квартиры:</legend>
+                  <p class="form__range-value"><span>68</span>м<sup>2</sup></p>
+                  <input type="range" class="form-range" id="customRange">
+                </fieldset>
+                <fieldset class="form__fieldset form__fieldset_2">
+                  <legend class="form__legend form__legend_2">Тип жилья:</legend>
+                  <!-- <div class="form__wrapper-1"> -->
+                  <input class="form__radio" type="radio" name="type" id="second">
+                  <label class="form__label form__label_1" for="second">Вторичное<br>жилье</label>
+                  <input class="form__radio" type="radio" name="type" id="new">
+                  <label class="form__label form__label_2" for="new">Новостройка</label>
+                  <input class="form__radio" type="radio" name="type" id="office">
+                  <label class="form__label form__label_3" for="office">Офис</label>
+                  <!-- </div> -->
+                </fieldset>
+                <fieldset class="form__fieldset form__fieldset_3">
+                  <legend class="form__legend form__legend_3">Кол-во комнат:</legend>
+                  <!-- <div class="form__wrapper-2"> -->
+                  <input class="form__radio" type="radio" name="rooms" id="one">
+                  <label class="form__label form__label_4" for="one">1</label>
+
+                  <input class="form__radio" type="radio" name="rooms" id="two">
+                  <label class="form__label form__label_5" for="two">2</label>
+
+                  <input class="form__radio" type="radio" name="rooms" id="more">
+                  <label class="form__label form__label_6" for="more">3+</label>
+
+                  <input class="form__radio" type="radio" name="rooms" id="studio">
+                  <label class="form__label form__label_7" for="studio">Студия</label>
+                  <!-- </div> -->
+
+
+                </fieldset>
+                <button class="form__submit" type="submit">Отправить</button>
+              </form>
+            </div>
+            <div class="main__scroll">
+              <p class="main__scroll-icon"></p>
+              <p class="main__scroll-text">Scroll</p>
+            </div>
+            <div class="main__img">
+              <img src="./img/main_img.png" alt="интерьер">
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+$track-w: 100%;
+$track-h: 12px;
+$track-r: 0.3 * $track-h;
+$track-bg: #baf1ff;
+$progr-bg: linear-gradient(#be69d5, #be69d5);
+$thumb-d: 33px;
+$thumb-r: 0.5 * $thumb-d;
+
+@mixin track($f: 0) {
+  border: none; /* because IE */
+  width: 100%;
+  height: $track-h;
+  border-radius: $track-r;
+  // -webkit-box-shadow: 0 1px #4e4f51;
+  // box-shadow: 0 1px #4e4f51;
+  background: $track-bg;
+
+  @if $f > 0 {
+    .js & {
+      background: $progr-bg 0 / var(--pos) 100% no-repeat, $track-bg;
+    }
+  }
+}
+
+@mixin fill() {
+  height: $track-h;
+  border-radius: $track-r 0 0 $track-r;
+  background: $progr-bg;
+}
+
+@mixin thumb($m: 0) {
+  margin-top: $m;
+  width: $thumb-d;
+  height: $thumb-d;
+  border-radius: 50%;
+  // -webkit-box-shadow: 0 0.25em 0.25em #070709, 0 0.125em 0.5em #070709;
+  // box-shadow: 0 0.25em 0.25em #070709, 0 0.125em 0.5em #070709;
+  background: #302594;
+  cursor: ew-resize;
+}
+
+[type="range"] {
+  &,
+  &::-webkit-slider-thumb,
+  &::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+  }
+
+  --val: 50;
+  --pos: -webkit-calc(#{0.5 * $thumb-d} + 0.01 * var(--val) * (100% - #{$thumb-d}));
+  --pos: calc(#{0.5 * $thumb-d} + 0.01 * var(--val) * (100% - #{$thumb-d}));
+  padding: 0;
+  width: $track-w;
+  max-width: 100%;
+  height: 2 * $thumb-d;
+  min-height: 2 * $track-h;
+  border-radius: 0.625em;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+
+  &::-webkit-slider-runnable-track {
+    @include track(1);
+  }
+  &::-moz-range-track {
+    @include track();
+  }
+  &::-ms-track {
+    @include track();
+    color: transparent;
+  }
+
+  &::-moz-range-progress {
+    @include fill();
+  }
+  &::-ms-fill-lower {
+    @include fill();
+  }
+
+  &::-webkit-slider-thumb {
+    @include thumb(calc(0.5 * (#{$track-h} - #{$thumb-d})));
+  }
+  &::-moz-range-thumb {
+    @include thumb();
+  }
+  &::-ms-thumb {
+    @include thumb();
+  }
+
+  &::-ms-tooltip {
+    display: none;
+  }
+
+  // &:focus {
+  //   outline: solid 0 transparent;
+  //   -webkit-filter: drop-shadow(0 0 5px #398ff2);
+  //   filter: drop-shadow(0 0 5px #398ff2);
+  // }
+}

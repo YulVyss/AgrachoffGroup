@@ -1,0 +1,120 @@
+$minWidth: 320px;
+$maxWidth: 1920;
+$maxWidthContainer: 1920;
+$md1: $maxWidthContainer + 20;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+@media (max-width: 1440px) {
+}
+@media (max-width: 991.98px) {
+}
+@media (max-width: 767.98px) {
+}
+@media (max-width: 479.98px) {
+}
+
+$fontMain: "Roboto";
+
+// colors
+$black: #000000;
+$blue: #302594;
+$lightblue: #baf1ff;
+
+* {
+	scroll-behavior: smooth;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+aside,
+nav,
+footer,
+header,
+section {
+	display: block;
+}
+html,
+body {
+	height: 100%;
+	min-width: $minWidth;
+}
+body {
+	line-height: 1;
+	font-family: $fontMain;
+	color: #ffffff;
+}
+input,
+button,
+textarea {
+	font-family: $fontMain;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	color: inherit;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+//======================================
+$form-range-track-width: 100%;
+$form-range-track-height: 0.5rem;
+$form-range-track-cursor: pointer;
+$form-range-track-bg: #be69d5;
+$form-range-track-border-radius: 1rem;
+// $form-range-track-box-shadow: $box-shadow-inset;
+
+// $form-range-thumb-width: 1rem;
+// $form-range-thumb-height: $form-range-thumb-width;
+// $form-range-thumb-bg: $component-active-bg;
+// $form-range-thumb-border: 0;
+// $form-range-thumb-border-radius: 1rem;
+// $form-range-thumb-box-shadow: 0 0.1rem 0.25rem rgba($black, 0.1);
+// $form-range-thumb-focus-box-shadow: 0 0 0 1px $body-bg, $input-focus-box-shadow;
+// $form-range-thumb-focus-box-shadow-width: $input-focus-width; // For focus box shadow issue in Edge
+// $form-range-thumb-active-bg: tint-color($component-active-bg, 70%);
+// $form-range-thumb-disabled-bg: var(--#{$prefix}secondary-color);
+// $form-range-thumb-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+// 	box-shadow 0.15s ease-in-out;
